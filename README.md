@@ -5,6 +5,7 @@
 Convert Excel to JSON, mapping sheet columns to object keys.
 
 Key features:
+
 - Define a specific Range (e.g. `'A1:E6'`)
 - Specify a column to key mapping (e.g. `{porperty1: 'CELLVALUE A1', property2: 'CELLVALUE B1'}`)
 - Get just specific sheets (e.g. `{sheets: ['sheet1', 'sheet2']}`)
@@ -111,11 +112,11 @@ You will notice that if your sheet has some top rows setup as a header (it is ve
 const excelToJson = require('convert-excel-to-json');
 
 const result = excelToJson({
-	sourceFile: 'SOME-EXCEL-FILE.xlsx',
-	header:{
-	    // Is the number of rows that will be skipped and will not be present at our result object. Counting from top to bottom
-	    rows: 1 // 2, 3, 4, etc.
-	}
+  sourceFile: 'SOME-EXCEL-FILE.xlsx',
+  header: {
+    // Is the number of rows that will be skipped and will not be present at our result object. Counting from top to bottom
+    rows: 1, // 2, 3, 4, etc.
+  },
 });
 
 // result will be an Object like the previous example, but without the rows that was defined as headers
@@ -130,26 +131,29 @@ Just gets all the rows for each sheet defined on the config object
 const excelToJson = require('convert-excel-to-json');
 
 const result = excelToJson({
-	sourceFile: 'SOME-EXCEL-FILE.xlsx',
-	header:{
-	    rows: 1
-	},
-	sheets: ['sheet2']
+  sourceFile: 'SOME-EXCEL-FILE.xlsx',
+  header: {
+    rows: 1,
+  },
+  sheets: ['sheet2'],
 });
 
 // result will be an Object like:
 {
-    sheet2: [{
-        A: 'data of cell A1',
-        B: 'data of cell B1',
-        C: 'data of cell C1'
-    }]
+  sheet2: [
+    {
+      A: 'data of cell A1',
+      B: 'data of cell B1',
+      C: 'data of cell C1',
+    },
+  ];
 }
 ```
 
 ### Mapping columns to keys
 
 #### One config to all sheets
+
 Gets all the rows, for each sheet, but defining which columns should be returned and how they should be named on the result object.
 
 ```javascript
@@ -176,7 +180,9 @@ const result = excelToJson({
     }]
 }
 ```
+
 #### Config per sheet
+
 Gets all the rows, for each sheet, but defining which columns should be returned and how they should be named on the result object, **per sheet**.
 
 ```javascript
@@ -213,7 +219,7 @@ const result = excelToJson({
 }
 ```
 
-**OBS:** The config *header.rows* can also be defined per sheet, like in the previous example of *columnToKey*. e.g.
+**OBS:** The config _header.rows_ can also be defined per sheet, like in the previous example of _columnToKey_. e.g.
 
 ```javascript
 {
@@ -274,11 +280,11 @@ const result = excelToJson({
 }
 ```
 
-**OBS:** {{columnHeader}} will follow the config *header.rows* or, in case it is not specified, it will always treat the first row as a header.
+**OBS:** {{columnHeader}} will follow the config _header.rows_ or, in case it is not specified, it will always treat the first row as a header.
 
 #### Automatic key/property naming following the column header {{columnHeader}}
 
-To return all the data but having the object keys named as a row header found at the excel, instead of the column letters, is just use two special configs. Check the following *columnToKey*:
+To return all the data but having the object keys named as a row header found at the excel, instead of the column letters, is just use two special configs. Check the following _columnToKey_:
 
 ```javascript
 'use strict';
@@ -306,7 +312,7 @@ const result = excelToJson({
 }
 ```
 
-**OBS:** {{columnHeader}} will follow the config *header.rows* or, in case it is not specified, it will always treat the first row as a header.
+**OBS:** {{columnHeader}} will follow the config _header.rows_ or, in case it is not specified, it will always treat the first row as a header.
 
 ### Null values
 
