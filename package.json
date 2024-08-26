@@ -1,35 +1,35 @@
 {
-  "name": "convert-excel-to-json",
-  "version": "1.7.0",
+  "name": "@boterop/convert-excel-to-json",
+  "version": "2.0.0",
   "description": "Convert Excel to JSON",
-  "homepage": "https://github.com/DiegoZoracKy/convert-excel-to-json/",
+  "homepage": "https://github.com/boterop/convert-excel-to-json/",
   "main": "./lib/convert-excel-to-json.js",
   "bin": "./bin/cli.js",
-  "author": {
-    "name": "Diego ZoracKy",
-    "email": "diego.zoracky@gmail.com",
-    "url": "https://github.com/DiegoZoracKy/"
-  },
+  "author": "boterop",
+  "forkedFrom": "https://github.com/DiegoZoracKy/convert-excel-to-json/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/DiegoZoracKy/convert-excel-to-json.git"
+    "url": "git://github.com/boterop/convert-excel-to-json.git"
   },
   "keywords": [
     "excel to json",
     "converts excel"
   ],
   "scripts": {
-    "test": "mocha ./tests -b"
+    "test": "mocha ./tests -b",
+    "format": "prettier --write .",
+    "check-format": "prettier -c ."
   },
   "dependencies": {
-    "argparse": "^1.0.2",
-    "magicli": "0.0.8",
-    "node.extend": "^2.0.2",
-    "xlsx": "^0.12.1"
+    "argparse": "^2.0.1",
+    "magicli": "^0.0.5",
+    "node.extend": "^2.0.3",
+    "prettier": "^3.3.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^5.2.0"
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3"
   }
 }
