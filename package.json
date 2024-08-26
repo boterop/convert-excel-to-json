@@ -23,13 +23,13 @@
     "test": "mocha ./tests -b"
   },
   "dependencies": {
-    "argparse": "^1.0.2",
-    "magicli": "0.0.8",
-    "node.extend": "^2.0.2",
-    "xlsx": "^0.12.1"
+    "argparse": "^2.0.1",
+    "magicli": "^0.0.5",
+    "node.extend": "^2.0.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^5.2.0"
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3"
   }
 }
