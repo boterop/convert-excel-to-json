@@ -6,7 +6,7 @@
   "main": "./lib/convert-excel-to-json.js",
   "bin": "./bin/cli.js",
   "author": "boterop",
-  "forkedFrom": "https://github.com/DiegoZoracKy/convert-excel-to-json/",
+  "fork": "Diego ZoracKy",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
     "excel to json",
     "converts excel"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "mocha ./tests -b",
     "format": "prettier --write .",
