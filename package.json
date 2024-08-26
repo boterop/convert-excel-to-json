@@ -17,12 +17,15 @@
     "converts excel"
   ],
   "scripts": {
-    "test": "mocha ./tests -b"
+    "test": "mocha ./tests -b",
+    "format": "prettier --write .",
+    "check-format": "prettier -c ."
   },
   "dependencies": {
     "argparse": "^2.0.1",
     "magicli": "^0.0.5",
     "node.extend": "^2.0.3",
+    "prettier": "^3.3.3",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
